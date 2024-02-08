@@ -23,10 +23,10 @@ public class ParamTech_StepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("website"));
     }
 
-    @When("Anasayfa'da olduğunu dogrular")
+    @When("Anasayfa'da oldugunu dogrular")
     public void anasayfa_da_oldugunu_dogrular() {
 
-        BrowserUtilities.verifyTitle(Driver.getDriver(), "Param: Nakit iade Avantaji ve Düsük Komisyon Orani - Param");
+        BrowserUtilities.verifyTitle(Driver.getDriver(), "Param: Nakit İade Avantajı ve Düşük Komisyon Oranı - Param");
 
     }
 
@@ -38,7 +38,7 @@ public class ParamTech_StepDefinitions {
 
     @When("Hesap olustur sayfasina yonlenir.")
     public void hesap_olustur_sayfasina_yonlenir() {
-        BrowserUtilities.verifyTitle(Driver.getDriver(), "Ücretsiz Param Hesabi Olustur - Param");
+        BrowserUtilities.verifyTitle(Driver.getDriver(), "Ücretsiz Param Hesabı Oluştur - Param");
 
     }
 
@@ -75,7 +75,7 @@ public class ParamTech_StepDefinitions {
 
     @Then("Verileri yanlis girdiğinde uyari mesajini gorür")
     public void verileriYanlisGirdigindeUyariMesajiniGorur() {
-        String expectedHataMesaji = "Hatali bilgi girisi yaptiniz.\n" +
+        String expectedHataMesaji = "Hatalı bilgi girişi yaptınız.\n" +
                 " Lütfen bilgilerinizi kontrol ediniz.";
         String actualHataMesaji = paramtech.hataMesaji.getText();
         Assert.assertEquals(actualHataMesaji, expectedHataMesaji);
@@ -85,7 +85,7 @@ public class ParamTech_StepDefinitions {
     public void hesapOlusturButonunaTiklar() {
         BrowserUtilities.sleep(3);
         //BrowserUtilities.hover(paramtech.hesapOlustur);
-         BrowserUtilities.clickWithJS(paramtech.hesapOlustur);
+        BrowserUtilities.clickWithJS(paramtech.hesapOlustur);
 
 
     }

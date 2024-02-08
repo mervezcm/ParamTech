@@ -42,7 +42,7 @@ public class ParamTechPage {
     public WebElement kullaniciAdi;
     @FindBy(xpath = "//input[@placeholder='Soyad']")
     public WebElement kullaniciSoyadi;
-    @FindBy(xpath = "//input[@placeholder='GSM Numarasi']")
+    @FindBy(xpath = "//input[@placeholder='GSM Numarası']")
     public WebElement kullaniciGsmNo;
 
     @FindBy(xpath = "//input[@placeholder='E-Posta Adresi']")

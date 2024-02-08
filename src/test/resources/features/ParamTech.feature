@@ -7,7 +7,7 @@ Feature: Kullanicinin Login ve Hesap olusturma sayfasinda aldigi hata validasyon
   @scenario1
   Scenario: Kullanicinin Kurumsal giristen Login olurken yanlis veri girdiğinde aldiği hatanin doğrulamasi
     Given Kullanici anasayfaya gider
-    Then Anasayfa'da olduğunu dogrular
+    Then Anasayfa'da oldugunu dogrular
     And Anasayfa'da yer alan Giris Yap butonuna tiklar
     And Hesap olustur sayfasina yonlenir.
     And Hesap olustur sayfasinda Kurumsal Giris butonuna tiklar
@@ -26,7 +26,7 @@ Feature: Kullanicinin Login ve Hesap olusturma sayfasinda aldigi hata validasyon
   @scenario2
   Scenario:Kullanicinin hesap olusturduktan sonra OTP ekraninda yanlis sifre girmesiyle aldiği hatanin doğrulanmasi
     Given Kullanici anasayfaya gider
-    When Anasayfa'da olduğunu dogrular
+    When Anasayfa'da oldugunu dogrular
     And Anasayfa'da yer alan Giris Yap butonuna tiklar
     And Hesap olustur sayfasina yonlenir.
     And Hesap olustur sayfasinda Kurumsal Giris butonuna tiklar
