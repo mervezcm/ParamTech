@@ -7,9 +7,8 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-
 public class BookingDates {
-    private String checkinDate;
-    private String checkoutDate;
+    private String checkin;
+    private String checkout;
 
 }

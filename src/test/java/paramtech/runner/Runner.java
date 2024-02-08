@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "paramtech/stepdefinitions",
         dryRun = false,
-        tags = "@scenario2",
+        tags = "@scenario1",
         publish = true
 
 )
