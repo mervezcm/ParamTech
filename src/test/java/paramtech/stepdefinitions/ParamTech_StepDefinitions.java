@@ -18,7 +18,7 @@ public class ParamTech_StepDefinitions {
     Faker faker = new Faker();
     ParamTechPage paramtech = new ParamTechPage();
 
-    @Given("Kullanıcı anasayfaya gider")
+    @Given("Kullanici anasayfaya gider")
     public void kullanici_anasayfaya_gider() {
         Driver.getDriver().get(ConfigurationReader.getProperty("website"));
     }
@@ -26,63 +26,63 @@ public class ParamTech_StepDefinitions {
     @When("Anasayfa'da olduğunu dogrular")
     public void anasayfa_da_oldugunu_dogrular() {
 
-        BrowserUtilities.verifyTitle(Driver.getDriver(), "Param: Nakit İade Avantajı ve Düşük Komisyon Oranı - Param");
+        BrowserUtilities.verifyTitle(Driver.getDriver(), "Param: Nakit iade Avantaji ve Düsük Komisyon Orani - Param");
 
     }
 
-    @When("Anasayfa'da yer alan Giris Yap butonuna tıklar")
+    @When("Anasayfa'da yer alan Giris Yap butonuna tiklar")
     public void anasayfa_da_yer_alan_giris_yap_butonuna_tiklar() {
         paramtech.girisYap.click();
 
     }
 
-    @When("Hesap oluştur sayfasına yönlenir.")
+    @When("Hesap olustur sayfasina yonlenir.")
     public void hesap_olustur_sayfasina_yonlenir() {
-        BrowserUtilities.verifyTitle(Driver.getDriver(), "Ücretsiz Param Hesabı Oluştur - Param");
+        BrowserUtilities.verifyTitle(Driver.getDriver(), "Ücretsiz Param Hesabi Olustur - Param");
 
     }
 
-    @When("Hesap oluştur sayfasında Kurumsal Giriş butonuna tıklar")
-    public void hesap_olustur_sayfasında_kurumsal_giris_butonuna_tıklar() {
+    @When("Hesap olustur sayfasinda Kurumsal Giris butonuna tiklar")
+    public void hesap_olustur_sayfasinda_kurumsal_giris_butonuna_tiklar() {
         BrowserUtilities.clickWithJS(paramtech.kurumsalgirisButonu);
 
     }
 
-    @When("Yeni açılan login ekranını görür")
-    public void yeni_açılan_login_ekranını_görür() {
+    @When("Yeni acilan login ekranini gorür")
+    public void yeni_acilan_login_ekranini_gorür() {
         BrowserUtilities.switchToWindow("https://isyerim.param.com.tr/#/");
 
 
     }
 
-    @And("Login ekranında GSM, TCKN ya da Kart Numarası'nı  girer")
-    public void loginEkranındaGSMTCKNYaDaKartNumarasıNıGirer() {
-        paramtech.telefonNumarası.sendKeys("5554443311");
+    @And("Login ekraninda GSM, TCKN ya da Kart Numarasi'ni  girer")
+    public void loginEkranindaGSMTCKNYaDaKartNumarasiNiGirer() {
+        paramtech.telefonNumarasi.sendKeys("5554443311");
 
     }
 
-    @And("Login ekranında şifresini girer.")
-    public void loginEkranındaSifresiniGirer() {
-        paramtech.şifre.sendKeys(faker.number().digits(8));
+    @And("Login ekraninda sifresini girer.")
+    public void loginEkranindaSifresiniGirer() {
+        paramtech.sifre.sendKeys(faker.number().digits(8));
     }
 
-    @When("Giris Yap butonuna tıklar")
-    public void giris_yap_butonuna_tıklar() {
+    @When("Giris Yap butonuna tiklar")
+    public void giris_yap_butonuna_tiklar() {
         paramtech.girisyapButonu.click();
 
     }
 
 
-    @Then("Verileri yanlış girdiğinde uyarı mesajını görür")
-    public void verileriYanlısGirdigindeUyarıMesajınıGorur() {
-        String expectedHataMesajı = "Hatalı bilgi girişi yaptınız.\n" +
+    @Then("Verileri yanlis girdiğinde uyari mesajini gorür")
+    public void verileriYanlisGirdigindeUyariMesajiniGorur() {
+        String expectedHataMesaji = "Hatali bilgi girisi yaptiniz.\n" +
                 " Lütfen bilgilerinizi kontrol ediniz.";
-        String actualHataMesajı = paramtech.hataMesajı.getText();
-        Assert.assertEquals(actualHataMesajı, expectedHataMesajı);
+        String actualHataMesaji = paramtech.hataMesaji.getText();
+        Assert.assertEquals(actualHataMesaji, expectedHataMesaji);
     }
 
-    @And("Hesap oluştur butonuna tıklar")
-    public void hesapOlusturButonunaTıklar() {
+    @And("Hesap olustur butonuna tiklar")
+    public void hesapOlusturButonunaTiklar() {
         BrowserUtilities.sleep(3);
         //BrowserUtilities.hover(paramtech.hesapOlustur);
          BrowserUtilities.clickWithJS(paramtech.hesapOlustur);
@@ -90,45 +90,45 @@ public class ParamTech_StepDefinitions {
 
     }
 
-    @And("Adını yazar")
-    public void adınıYazar() {
-        paramtech.kullanıcıAdı.sendKeys(faker.name().firstName());
+    @And("Adini yazar")
+    public void adiniYazar() {
+        paramtech.kullaniciAdi.sendKeys(faker.name().firstName());
     }
 
-    @And("Soyadını yazar")
-    public void soyadınıYazar() {
-        paramtech.kullanıcıSoyadı.sendKeys(faker.name().lastName());
+    @And("Soyadini yazar")
+    public void soyadiniYazar() {
+        paramtech.kullaniciSoyadi.sendKeys(faker.name().lastName());
     }
 
     @And("E-posta adresini yazar")
     public void ePostaAdresiniYazar() {
-        paramtech.kullanıcıEmail.sendKeys(faker.name().username() + "@paramtech.com");
+        paramtech.kullaniciEmail.sendKeys(faker.name().username() + "@paramtech.com");
     }
 
 
-    @And("GSM numarasını yazar")
-    public void gsmNumarasınıYazar() {
-        paramtech.kullanıcıGsmNo.sendKeys("5559986589");
+    @And("GSM numarasini yazar")
+    public void gsmNumarasiniYazar() {
+        paramtech.kullaniciGsmNo.sendKeys("5559986589");
 
     }
 
-    @And("Kullanıcı aydınlatma metnini,Veriaktarım acık rıza metnini ve Hesap açılış sözleşmesini işaretler.")
-    public void kullanıcıAydınlatmaMetniniVeriaktarımAcıkRızaMetniniVeHesapAcılısSozlesmesiniIsaretler() {
+    @And("Kullanici aydinlatma metnini,Veriaktarim acik riza metnini ve Hesap acilis sozlesmesini isaretler.")
+    public void kullaniciAydinlatmaMetniniVeriaktarimAcikRizaMetniniVeHesapAcilisSozlesmesiniisaretler() {
 
-        paramtech.aydınlatmaMetni.click();
-        paramtech.acıkRızaMetni.click();
-        paramtech.hesapAcılısSözlesmesı.click();
+        paramtech.aydinlatmaMetni.click();
+        paramtech.acikRizaMetni.click();
+        paramtech.hesapAcilisSozlesmesi.click();
 
     }
 
-    @And("Devam butonuna tıklar")
-    public void devamButonunaTıklar() {
+    @And("Devam butonuna tiklar")
+    public void devamButonunaTiklar() {
         paramtech.devamButonu.click();
 
     }
 
-    @And("Telefonuna gelen onay kodunu yanlış girer")
-    public void telefonunaGelenOnayKodunuYanlısGirer() {
+    @And("Telefonuna gelen onay kodunu yanlis girer")
+    public void telefonunaGelenOnayKodunuYanlisGirer() {
         BrowserUtilities.sleep(2);
         paramtech.onaykodu1.sendKeys(faker.number().digits(1));
         paramtech.onaykodu2.sendKeys(faker.number().digits(1));
@@ -140,14 +140,14 @@ public class ParamTech_StepDefinitions {
 
     }
 
-    @And("Onayla butonuna tıklar")
-    public void onaylaButonunaTıklar() {
+    @And("Onayla butonuna tiklar")
+    public void onaylaButonunaTiklar() {
         paramtech.onaylaButonu.click();
 
     }
 
-    @Then("Girilen onay kodu yanlış olduğundan hata mesajını görür")
-    public void girilenOnayKoduYanlısOldugundanHataMesajınıGorur() {
+    @Then("Girilen onay kodu yanlis olduğundan hata mesajini gorür")
+    public void girilenOnayKoduYanlisOldugundanHataMesajiniGorur() {
         System.out.println(paramtech.errorMessage.isDisplayed());
     }
 }

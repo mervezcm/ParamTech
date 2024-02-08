@@ -19,42 +19,42 @@ public class ParamTechPage {
 
 
     @FindBy(xpath = "//input[@name='userCardNo']")
-    public WebElement telefonNumarası;
+    public WebElement telefonNumarasi;
 
     @FindBy(xpath = "//a[@class='btn btn-outline-primary btn-icon']")
     public WebElement kurumsalgirisButonu;
 
     @FindBy(xpath = "//input[@name='userPassword']")
-    public WebElement şifre;
+    public WebElement sifre;
 
     @FindBy(xpath = "//button[@id='loginbutton']")
     public WebElement girisyapButonu;
 
 
     @FindBy(xpath = "//div[@class='modalTitle___WE5UD']")
-    public WebElement hataMesajı;
+    public WebElement hataMesaji;
 
     // scnario2
     @FindBy(xpath = "//span[@class='signUp___3OOhy']")
     public WebElement hesapOlustur;
     ////
     @FindBy(xpath = "//input[@placeholder='Ad']")
-    public WebElement kullanıcıAdı;
+    public WebElement kullaniciAdi;
     @FindBy(xpath = "//input[@placeholder='Soyad']")
-    public WebElement kullanıcıSoyadı;
-    @FindBy(xpath = "//input[@placeholder='GSM Numarası']")
-    public WebElement kullanıcıGsmNo;
+    public WebElement kullaniciSoyadi;
+    @FindBy(xpath = "//input[@placeholder='GSM Numarasi']")
+    public WebElement kullaniciGsmNo;
 
     @FindBy(xpath = "//input[@placeholder='E-Posta Adresi']")
-    public WebElement kullanıcıEmail;
+    public WebElement kullaniciEmail;
 
     @FindBy(xpath = "//div[@name='checkBox1']")
-    public WebElement aydınlatmaMetni ;
+    public WebElement aydinlatmaMetni ;
 
     @FindBy(xpath = "//div[@name='checkBox2']")
-    public WebElement acıkRızaMetni;
+    public WebElement acikRizaMetni;
     @FindBy(xpath = "//div[@name='checkBox3']")
-    public WebElement hesapAcılısSözlesmesı;
+    public WebElement hesapAcilisSozlesmesi;
 
     @FindBy(xpath = "//button[@id='continue_from_signup']")
     public WebElement devamButonu;

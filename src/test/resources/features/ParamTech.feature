@@ -1,46 +1,46 @@
-#  https://param.com.tr adresinde Anasayfa’ da yer alan “Giriş Yap” butonu aracılığıyla /hesap-olustur sayfasına yönlenilir.
-# Yönlendirme sonrası “Kurumsal Giriş” seçeneği seçilerek farklı bir sayfada açılan Login ekranına redirect olunur.
-# Açılan sayfada giriş bilgileri yanlış girilerek , verilen validasyon uyarısının doğrulandığını teyit eden test senaryosunu tamamlamanız beklenmektedir. //
+#  https://param.com.tr adresinde Anasayfa’ da yer alan “Giris Yap” butonu araciliğiyla /hesap-olustur sayfasina yonlenilir.
+# Yonlendirme sonrasi “Kurumsal Giris” seceneği secilerek farkli bir sayfada acilan Login ekranina redirect olunur.
+# Acilan sayfada giris bilgileri yanlis girilerek , verilen validasyon uyarisinin doğrulandiğini teyit eden test senaryosunu tamamlamaniz beklenmektedir. //
 
-Feature: Kullanıcının Login ve Hesap olusturma sayfasında aldıgı hata validasyonu
+Feature: Kullanicinin Login ve Hesap olusturma sayfasinda aldigi hata validasyonu
 
   @scenario1
-  Scenario: Kullanıcının Kurumsal girişten Login olurken yanlış veri girdiğinde aldığı hatanın doğrulaması
-    Given Kullanıcı anasayfaya gider
+  Scenario: Kullanicinin Kurumsal giristen Login olurken yanlis veri girdiğinde aldiği hatanin doğrulamasi
+    Given Kullanici anasayfaya gider
     Then Anasayfa'da olduğunu dogrular
-    And Anasayfa'da yer alan Giris Yap butonuna tıklar
-    And Hesap oluştur sayfasına yönlenir.
-    And Hesap oluştur sayfasında Kurumsal Giriş butonuna tıklar
-    Then Yeni açılan login ekranını görür
-    And Login ekranında GSM, TCKN ya da Kart Numarası'nı  girer
-    And Login ekranında şifresini girer.
-    And Giris Yap butonuna tıklar
-    Then Verileri yanlış girdiğinde uyarı mesajını görür
+    And Anasayfa'da yer alan Giris Yap butonuna tiklar
+    And Hesap olustur sayfasina yonlenir.
+    And Hesap olustur sayfasinda Kurumsal Giris butonuna tiklar
+    Then Yeni acilan login ekranini gorür
+    And Login ekraninda GSM, TCKN ya da Kart Numarasi'ni  girer
+    And Login ekraninda sifresini girer.
+    And Giris Yap butonuna tiklar
+    Then Verileri yanlis girdiğinde uyari mesajini gorür
 
-    # Bir önceki Case de login adımına ilerlenilen adımlar tekrar edilir. Login Sayfasında
-#“Hesap Oluştur” seçeneği ile devam edilir.
-# Hesap oluşturmak için gerekli bilgiler doldurulur.
-#●“Devam” butonu aracılığıyla ilerlenir.
-# OTP ekranında yanlış şifre girişi yapılarak verilen validasyon doğrulanır.#
+    # Bir onceki Case de login adimina ilerlenilen adimlar tekrar edilir. Login Sayfasinda
+#“Hesap Olustur” seceneği ile devam edilir.
+# Hesap olusturmak icin gerekli bilgiler doldurulur.
+#●“Devam” butonu araciliğiyla ilerlenir.
+# OTP ekraninda yanlis sifre girisi yapilarak verilen validasyon doğrulanir.#
 
   @scenario2
-  Scenario:Kullanıcının hesap olusturduktan sonra OTP ekranında yanlış şifre girmesiyle aldığı hatanın doğrulanması
-    Given Kullanıcı anasayfaya gider
+  Scenario:Kullanicinin hesap olusturduktan sonra OTP ekraninda yanlis sifre girmesiyle aldiği hatanin doğrulanmasi
+    Given Kullanici anasayfaya gider
     When Anasayfa'da olduğunu dogrular
-    And Anasayfa'da yer alan Giris Yap butonuna tıklar
-    And Hesap oluştur sayfasına yönlenir.
-    And Hesap oluştur sayfasında Kurumsal Giriş butonuna tıklar
-    And Yeni açılan login ekranını görür
-    And Hesap oluştur butonuna tıklar
-    And Adını yazar
-    And Soyadını yazar
+    And Anasayfa'da yer alan Giris Yap butonuna tiklar
+    And Hesap olustur sayfasina yonlenir.
+    And Hesap olustur sayfasinda Kurumsal Giris butonuna tiklar
+    And Yeni acilan login ekranini gorür
+    And Hesap olustur butonuna tiklar
+    And Adini yazar
+    And Soyadini yazar
     And E-posta adresini yazar
-    And GSM numarasını yazar
-    And Kullanıcı aydınlatma metnini,Veriaktarım acık rıza metnini ve Hesap açılış sözleşmesini işaretler.
-    And Devam butonuna tıklar
-    And Telefonuna gelen onay kodunu yanlış girer
-    And Onayla butonuna tıklar
-    Then Girilen onay kodu yanlış olduğundan hata mesajını görür
+    And GSM numarasini yazar
+    And Kullanici aydinlatma metnini,Veriaktarim acik riza metnini ve Hesap acilis sozlesmesini isaretler.
+    And Devam butonuna tiklar
+    And Telefonuna gelen onay kodunu yanlis girer
+    And Onayla butonuna tiklar
+    Then Girilen onay kodu yanlis olduğundan hata mesajini gorür
 
 
 
