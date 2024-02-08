@@ -13,6 +13,5 @@ public class Customer {
     private int totalprice;
     private boolean depositpaid;
     private BookingDates bookingdates;
-
     private String additionalneeds;
 }
